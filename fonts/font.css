@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "GOTHICB";
+  src: url(../fonts/GOTHICB.ttf),
+          url(../fonts/GOTHICB.woff)  ;
+  font-style: normal;
+  font-weight: bold;
+}
