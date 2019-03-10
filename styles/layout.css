@@ -15,12 +15,13 @@
 }
 
 .main-screen h1 {
-  padding-top: 337px;
+  padding-top: 320px;
   font-size: 40px;
   font-family: "GOTHICB";
   font-weight: bold;
   font-style: normal;
   color: #fff;
+  letter-spacing: 2px;
 }
 
 .main-screen h2 {
@@ -31,7 +32,7 @@
   font-style: normal;
   font-weight: 300;
 }
-/* поменять фон на градиент */
+
 .second-part {
   height: 812px;
   background: repeating-linear-gradient(90deg, #000 0, #000 22px, #F4D80F 22px, #F4D80F 44px, #000 44px, #000 68px, #F4D80F 68px, #F4D80F 90px);
@@ -92,4 +93,49 @@
 .morpf img {
   position: absolute;
   top: 1570px;
+}
+@media (min-width: 486px) {
+  .main-screen {
+    height: 960px;
+  }
+  .line {
+    margin-top: 120px;
+  }
+  .main-screen h1 {
+    font-size: 65px;
+  }
+  .main-screen h2{
+    font-size: 32px;
+  }
+  .second-part {
+    height: 1088px;
+    background: repeating-linear-gradient(90deg, #000 0, #000 44px, #F4D80F 44px, #F4D80F 88px, #000 88px, #000 132px, #F4D80F 132px, #F4D80F 176px);
+  }
+  .second-part .black-area {
+    height: 484px;
+    padding: 127px 0 0 58px;
+  }
+  .second-part .black-area h3 {
+    font-size: 37px;
+    width: 803px;
+  }
+  .second-part .black-area article {
+    font-size: 25px;
+    width: 630px;
+  }
+}
+@media (min-width: 1024px) {
+  .main-screen {
+    height: 1024px;
+  }
+  .line {
+    margin-top: 40px;
+  }
+  .main-screen h1 {
+    /* padding-top: 410px;   */
+  }
+  .second-part .black-area {
+    padding: 150px 0 0 309px;
+  }
+
 }
