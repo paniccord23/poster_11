@@ -1,19 +1,39 @@
-$(function() {
-  let a = getRandomArbitrary(20, 150)
-  let b = getRandomArbitrary(70, 400)
-  let c = getRandomArbitrary(140, 700)
-  let d = getRandomArbitrary(1, 60)
-  let e = getRandomArbitrary(310, 900)
-  let f = getRandomArbitrary(400, 900)
-  let g = getRandomArbitrary(160, 400)
-  let h = getRandomArbitrary(600, 990)
-  let i = getRandomArbitrary(1, 150)
-  let j = getRandomArbitrary(300, 900)
-  let k = getRandomArbitrary(20, 150)
-  let l = getRandomArbitrary(70, 600)
+var morpfing = anime({
+        targets: '.polymorpf',
+        points: [
+          { value: '85,1 124,10 152,107 74,54' },
+          { value: '85,1 124,10 152,107 90,116' },
+          { value: '85,1 152,12 152,107 90,116' },
+          { value: '85,1 152,12 189,94 90,116' },
+        ],
+        easing: 'easeOutQuad',
+        duration: 2000,
+        loop: true
+      })
 
-  let points = a + "," + b + "," + c + "," + d + "," + e + "," + f + "," + g + "," + h + "," + i + "," + j + "," + k + "," + l
-
-
-  $("#poly").attr("points", points)
-})
+      // $(function() {
+      //     $(#letter) {
+      //       let width  = 150
+      //       let height = 145
+      //       let x      = 400
+      //       let y      = 200
+      //       $(this).css({
+      //         "top": y + "px",
+      //         "left": x + "px",
+      //         "width":  width + "px",
+      //         "height": height + "px",
+      //       })
+      //       $(this).on("mouseenter", function() {
+      //         let width  = Math.floor(Math.random() * 1000) + 500
+      //         let height = Math.floor(Math.random() * 1000) +500
+      //         let x      = Math.floor(Math.random() * 800) +200
+      //         let y      = Math.floor(Math.random() * 300) +200
+      //         $(this).css({
+      //           "top": y + "px",
+      //           "left": x + "px",
+      //           "width":  width + "px",
+      //           "height": height + "px",
+      //         })
+      //       })
+      //     })
+      //   })

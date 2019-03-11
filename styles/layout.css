@@ -89,10 +89,64 @@
   width: 100vw;
   flex-direction: column;
   background-image: repeating-linear-gradient(90deg, #000 0, #000 22px, #FFF 22px, #FFF 44px, #000 44px, #000 68px, #FFF 68px, #FFF 90px);
+  display: flex;
+  justify-content: center;
 }
-.morpf img {
+.morpf svg {
   position: absolute;
-  top: 1570px;
+  top: 1670px;
+  left: -300px;
+  width: 150%;
+  stroke:#F4D80F;
+}
+.letter {
+  position: absolute;
+  top: 2000px;
+  left: 200px;
+  z-index: 7;
+  width: 20%;
+}
+.letter1 {
+  position: absolute;
+  top: 2050px;
+  left: 600px;
+  z-index: 7;
+  width: 15%;
+}
+.letter2 {
+  position: absolute;
+  top: 2350px;
+  left: 300px;
+  z-index: 7;
+  width: 20%;
+}
+.letter3 {
+  position: absolute;
+  top: 2550px;
+  left: 700px;
+  z-index: 7;
+  width: 20%;
+}
+.letter4 {
+  position: absolute;
+  top: 2750px;
+  left: 400px;
+  z-index: 7;
+  width: 20%;
+}
+.letter5 {
+  position: absolute;
+  top: 2950px;
+  left: 730px;
+  z-index: 7;
+  width: 15%;
+}
+.letter6 {
+  position: absolute;
+  top: 3050px;
+  left: 330px;
+  z-index: 7;
+  width: 15%;
 }
 @media (min-width: 486px) {
   .main-screen {
@@ -123,6 +177,12 @@
     font-size: 25px;
     width: 630px;
   }
+  .morpf {
+    background-image: repeating-linear-gradient(90deg, #000 0, #000 44px, #FFF 44px, #FFF 88px, #000 88px, #000 132px, #FFF 132px, #FFF 176px);
+  }
+  .morpf svg {
+    top: 2000px;
+  }
 }
 @media (min-width: 1024px) {
   .main-screen {
@@ -131,11 +191,11 @@
   .line {
     margin-top: 40px;
   }
-  .main-screen h1 {
-    /* padding-top: 410px;   */
-  }
   .second-part .black-area {
     padding: 150px 0 0 309px;
+  }
+  .morpf {
+    height: 1500px;
   }
 
 }
