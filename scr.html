@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>responsive js</title>
+    <style media="screen">
+      .cube {
+        height: 300px;
+        width: 300px;
+        background: red;
+        transition: 800ms all ease;
+        animation: vibration 300ms linear infinite;
+      }
+      .animated {
+        border-radius: 50%;
+      }
+      .cubeTwo {
+        height: 350px;
+        width: 350px;
+        background-color: blue;
+      }
+      @keyframes vibration {
+        0% {
+          transform: translate(0);
+        }
+        20% {
+          transform: translate(-2px, 2px);
+        }
+        40% {
+          transform: translate(-2px, -2px);
+        }
+        60% {
+          transform: translate(2px, 2px);
+        }
+        80% {
+          transform: translate(2px, -2px);
+        }
+        100% {
+          transform: translate(0);
+        }
+      }
+      @media (max-width: 768px) {
+        .animated {
+          border-radius:0;
+          background: green;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cube" class="cube animated"></div>
+    <div id="cubeTwo" class="cubeTwo">
+
+    </div>
+
+    <script src="js/anime.min.js"></script>
+    <script type="text/javascript">
+      let desktopAnimation = anime({
+        targets: "cubeTwo",
+        translateX: 250,
+        translateY: -250,
+        loop: true,
+        borderRadius: ["0%", "50%"],
+        duration: 1200,
+        easing: "easeInOutQuad",
+        direction: "alternative"
+
+      })
+      let mobileAnimation = anime({
+        targets: ".cubeTwo",
+        rotate: 250,
+        scale: 1.2,
+        loop:true,
+        autoplay: false,
+        duration:3000,
+        direction: "alternative"
+      })
+      let tl = anime.timeline()
+      tl.add({
+        targets: ".cubeTwo",
+        translateX: 250
+      })
+    //let $cube = document.querySelector("#cube")
+    // let $cube = document.querySelector(".cube")
+      let $cube = document.getElementById("cube")
+      // переменная с долларом - это как ссылка на дом элемент
+      $cube.onclick = function handleClick() {
+
+        this.classList.toggle("animated")
+      }
+      window.addEventListener("resize", function(event) {
+        if (event.target.innerWidth > 768) {
+          $cube.style.animation = "none"
+          desktopAnimation.play()
+          mobileAnimation.pause()
+        } else {
+          $cube.style.animation = "vibration 300ms linear infinite"
+          desktopAnimation.pause()
+          mobileAnimation.play()
+        }
+      })
+    </script>
+
+
+  </body>
+</html>
+<!-- window.innerWidth -->

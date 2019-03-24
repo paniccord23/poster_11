@@ -1,1 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 316.14 684.75"><defs><style>.cls-1{stroke:#f4d80f;stroke-linecap:round;stroke-miterlimit:10;stroke-width:4.03px;}</style></defs><g id="Слой_2" data-name="Слой 2"><g id="Слой_1-2" data-name="Слой 1"><polygon class="cls-1" points="34.06 94.84 272.06 2.84 314.06 442.84 138.06 680.84 2.06 390.84 34.06 94.84"/></g></g></svg>
+<svg viewBox="0 0 316.14 684.75">
+  <polygon class="cls-1" points="34.06 94.84 272.06 2.84 314.06 442.84 138.06 680.84 2.06 390.84 34.06 94.84"/>
+</svg>

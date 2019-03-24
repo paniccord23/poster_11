@@ -3,6 +3,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+body {
+  overflow-x: hidden;
+}
 .wrapper {
   width: 100vw;
   display: flex;
@@ -13,15 +16,16 @@
   background-color: #000;
   text-align: center;
 }
-
 .main-screen h1 {
-  padding-top: 320px;
-  font-size: 40px;
+  padding-top: 290px;
+  font-size: 50px;
   font-family: "GOTHICB";
   font-weight: bold;
   font-style: normal;
   color: #fff;
   letter-spacing: 2px;
+  position: relative;
+  z-index: 5;
 }
 
 .main-screen h2 {
@@ -32,7 +36,42 @@
   font-style: normal;
   font-weight: 300;
 }
-
+.main-img {
+  position: absolute;
+  z-index: 10;
+}
+.duck, .giraffe, .hole-first, .hole-second, .hole-eyes {
+  position: relative;
+  z-index: 3;
+}
+.duck {
+  top: 180px;
+  left: 350px;
+  width: 70px;
+}
+.giraffe {
+  top: 180px;
+  left: 200px;
+  width: 80px;
+}
+.hole-first {
+  top: -490px;
+  width: 50px;
+}
+.hole-second {
+  top: -320px;
+  left: 380px;
+  width: 50px;
+}
+.hole-eyes {
+  top: -450px;
+  left: -400px;
+  width: 70px;
+}
+.hole-down {
+  top: 40px;
+  width: 70px;
+}
 .second-part {
   height: 812px;
   background: repeating-linear-gradient(90deg, #000 0, #000 22px, #F4D80F 22px, #F4D80F 44px, #000 44px, #000 68px, #F4D80F 68px, #F4D80F 90px);
@@ -69,7 +108,7 @@
 }
 .line {
   margin-top: 150px;
-  z-index: 5;
+  z-index: 2;
   position: absolute;
   left: -10%;
   top: 10%;
@@ -77,7 +116,7 @@
 }
 .second-line {
   margin-top: 350px;
-  z-index: 5;
+  z-index: 2;
   position: absolute;
   top: 30%;
   left: -10%;
@@ -87,10 +126,7 @@
   margin-top: 180px;
   height: 900px;
   width: 100vw;
-  flex-direction: column;
   background-image: repeating-linear-gradient(90deg, #000 0, #000 22px, #FFF 22px, #FFF 44px, #000 44px, #000 68px, #FFF 68px, #FFF 90px);
-  display: flex;
-  justify-content: center;
 }
 .morpf svg {
   position: absolute;
@@ -101,53 +137,10 @@
 }
 .letter {
   position: absolute;
-  top: 2000px;
-  left: 200px;
   z-index: 7;
-  width: 20%;
+
 }
-.letter1 {
-  position: absolute;
-  top: 2050px;
-  left: 600px;
-  z-index: 7;
-  width: 15%;
-}
-.letter2 {
-  position: absolute;
-  top: 2350px;
-  left: 300px;
-  z-index: 7;
-  width: 20%;
-}
-.letter3 {
-  position: absolute;
-  top: 2550px;
-  left: 700px;
-  z-index: 7;
-  width: 20%;
-}
-.letter4 {
-  position: absolute;
-  top: 2750px;
-  left: 400px;
-  z-index: 7;
-  width: 20%;
-}
-.letter5 {
-  position: absolute;
-  top: 2950px;
-  left: 730px;
-  z-index: 7;
-  width: 15%;
-}
-.letter6 {
-  position: absolute;
-  top: 3050px;
-  left: 330px;
-  z-index: 7;
-  width: 15%;
-}
+
 @media (min-width: 486px) {
   .main-screen {
     height: 960px;
